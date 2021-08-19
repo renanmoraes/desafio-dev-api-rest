@@ -7,6 +7,7 @@ import userSignUpRequestPresentation from '../auth/user/presentation/user-sign-u
 import userRecoverPasswordRequestPresentation from '../auth/user/presentation/user-recover-password-request/user-recover-password-request-presentation'
 
 import { HTTP_STATUS_INTERNAL_ERROR, HTTP_STATUS_OK } from './constantes'
+import pessoaPresentation from '../pessoas/presentation/pessoa-presentation'
 
 const getHealthApplication = (_req: Request, res: Response) => {
   return res.status(HTTP_STATUS_OK).json({ awsHealth: HTTP_STATUS_OK })
@@ -33,6 +34,8 @@ const startRoutes = (server: Application) => {
   )
 
   server.use(`${urlBase}/user`, userPresentation)
+
+  server.use(`${urlBase}/pessoa`, pessoaPresentation)
 
   server.use((req, res, next) => {
     res.status(HTTP_STATUS_INTERNAL_ERROR).json({

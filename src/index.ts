@@ -26,9 +26,10 @@ server.use(BodyParser.json({ limit: '10mb' }))
 server.use(cors())
 server.use(compression())
 server.use(helmet())
-server.use(
-  jwt({ secret: config.jwt.secret, algorithms: ['HS256'] }).unless(unlessPath)
-)
+// Comentado para nao precisar de token
+// server.use(
+//   jwt({ secret: config.jwt.secret, algorithms: ['HS256'] }).unless(unlessPath)
+// )
 server.use(decoder)
 
 server.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
