@@ -20,7 +20,13 @@ Antes de iniciar o projeto precisamos rodar `npm i` para instalar todas as depen
 
 ### Criar .env
 
-Apos isso precisamos criar um arquivo `.env` na raiz do projeto, nele estará as variaveis de ambiente de nossa aplicação.
+Apos isso precisamos criar um arquivo `.env` na raiz do projeto, nele estará as variaveis de ambiente de nossa aplicação. Para auxiliar deixei um arquivo `.env.example` com as estruturas necessarias para rodar o projeto.
 
 > cp .env.example .env
+
+### Rodar o projeto
+
+Para rodar o projeto em modo desenvolvimento foi escrito um script que facilita este comando, para utiliza-lo basta executar
+
+> npm run start
 

@@ -1,0 +1,10 @@
+export const HTTP_STATUS_OK = 200
+export const HTTP_STATUS_CREATED = 201
+export const HTTP_STATUS_BAD_REQUEST = 400
+export const HTTP_STATUS_CONFLICT = 409
+export const HTTP_STATUS_INTERNAL_ERROR = 500
+
+export const HTTP_MESSAGE_DEFAULT_OK = 'OK'
+export const HTTP_MESSAGE_DEFAULT_CREATED = 'Created'
+export const HTTP_MESSAGE_DEFAULT_BAD_REQUEST = 'Bad Request'
+export const HTTP_MESSAGE_DEFAULT_INTERNAL_ERROR = 'Internal Error'
