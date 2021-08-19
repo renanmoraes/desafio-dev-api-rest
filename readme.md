@@ -10,7 +10,7 @@
 
 Para isso precisamos rodar o comando que irá criar um container rodando mongo, isso nos evitará ter que instalar tudo do mongo
 
-> 
+> docker run --name mongo -p 27017:27017 -d mongo:latest 
 
 ### Instalar dependencias
 
