@@ -2,6 +2,14 @@ import 'reflect-metadata'
 import { Container } from 'inversify'
 import SERVICE_IDENTIFIER from './service-identifier'
 import {
+  PessoaRepository,
+  PessoaRepositoryImpl
+} from './pessoas/infrastructure/repository/pessoa-repository'
+import {
+  PessoaApplication,
+  PessoaApplicationImpl
+} from './pessoas/application/pessoa-application'
+import {
   UserSignUpRequestApplication,
   UserSignUpRequestApplicationImpl
 } from './auth/user/application/user-sign-up-request/user-sign-up-request-application'
@@ -61,6 +69,15 @@ container
 container
   .bind<UserRepository>(SERVICE_IDENTIFIER.UserRepository)
   .to(UserRepositoryImpl)
+  .inTransientScope()
+
+container
+  .bind<PessoaApplication>(SERVICE_IDENTIFIER.PessoaApplication)
+  .to(PessoaApplicationImpl)
+
+container
+  .bind<PessoaRepository>(SERVICE_IDENTIFIER.PessoaRepository)
+  .to(PessoaRepositoryImpl)
   .inTransientScope()
 
 export default container

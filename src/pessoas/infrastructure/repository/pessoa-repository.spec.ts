@@ -1,6 +1,6 @@
 import { PessoaRepositoryImpl } from './pessoa-repository'
-import MongoDbConnectionSingleton from '../../../../shared/infrastructure/service/mongo/mongo-db-connection-service';
-import pessoasDouble from '../../pessoa/double/pessoa-double';
+import MongoDbConnectionSingleton from '../../../../shared/infrastructure/service/mongo/mongo-db-connection-service'
+import pessoasDouble from '../../pessoa/double/pessoa-double'
 
 const pessoaRepository = new PessoaRepositoryImpl()
 

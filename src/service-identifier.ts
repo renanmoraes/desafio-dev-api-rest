@@ -3,6 +3,10 @@ const SERVICE_IDENTIFIER = {
 
   UserSignUpRequestApplication: Symbol('UserSignUpRequestApplicationImpl'),
 
+  PessoaRepository: Symbol('PessoaRepository'),
+
+  PessoaApplication: Symbol('PessoaApplication'),
+
   UserRecoverPasswordRequetApplication: Symbol(
     'UserRecoverPasswordRequetApplicationImpl'
   ),

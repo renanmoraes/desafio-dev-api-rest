@@ -1,9 +1,9 @@
-import { Pessoa } from './../../pessoa/entity/pessoa'
+import { Pessoa } from '../../domain/pessoa/entity/pessoa'
 import { createFilter } from 'odata-v4-mongodb'
 import { injectable } from 'inversify'
-import { AggregatePaginate } from '../../../../shared/models/aggregate-paginate'
+import { AggregatePaginate } from '../../../shared/models/aggregate-paginate'
 import PessoaModel from './pessoa-model'
-import logger from '../../../../shared/cross/logger'
+import logger from '../../../shared/cross/logger'
 
 export interface PessoaRepository {
   getPages(
